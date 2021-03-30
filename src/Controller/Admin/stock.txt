@@ -1,0 +1,6 @@
+TextField::new('imageFile')->setFormType(VichFileType::class, [
+                'delete_label' => 'supprimer?'
+            ])->onlyOnForms(),
+            ImageField::new('imageFile')->setBasePath('/uploads/images/products')->onlyOnDetail(),
+            ImageField::new('imageFile')->setFormType(VichImageType::class)
+        ];
